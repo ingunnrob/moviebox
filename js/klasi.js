@@ -112,8 +112,25 @@ class Movie {
 
     }	
 	
+	/* //Þetta á að tengjast aboutmovie 
+		renderSingleMovie(){
+		$('.year-text').text(this.movieList.release_date.split('-')[0]);
+		$('.duration-text').text(this.movieList.runtime +' min');
+		$('.ir-title').text(this.movieList.title);
+		$('.director-text').text("N/A");// can't find it fill it out
+		$('.writer-text').text("N/A");// can't find it fill it out 
+		$('.synopsis-text').text(this.movieList.overview);// can't find it fill it out 
+		$('#main-poster').attr("src",'https://image.tmdb.org/t/p/w780'+ this.movieList.poster_path)
+		$('.rating-text').text(this.movieList.vote_average);
+		
+	}*/
 	
-} 
+
+	
+}
+
+
+
 
 //klassi fyrir genre array 
 class Genre {
