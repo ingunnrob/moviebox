@@ -4,7 +4,8 @@ School assignment for Vefskólinn.
 
 Ingunn & Hrefna
 
-Kvikmyndasíða sem tengir við einn apa, við ætluðum að tengja líka við kvikmyndir.is en það virkaði ekki. Það gékk ágætlega að nota git á milli okkar, en okkur fannst verkefnið erfitt og við náðum ekki að klára það eins og við vildum.
+Kvikmyndasíða sem tengir við einn apa, við ætluðum að tengja líka við kvikmyndir.is en það virkaði ekki. 
+Það gekk ágætlega að nota git á milli okkar, en okkur fannst verkefnið einstaklega erfitt og við náðum ekki að klára það eins vel og við vildum.
 
 Við notuðum Bootstrap framwork og nýttum okkur grid, modal og slick slider úr því.
 
