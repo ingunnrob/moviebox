@@ -8,25 +8,18 @@ function openMovieModal(id, listType){ // það sem er inn í sviganum er object
 	//console.log(movie.id);
 	
 	//$('#modalContent').empty(); // verður fyrst að tæma modal-ið því annars bætast nýjar upplýsingar við þær gömlu - þarf ekki þessa skipun með því að bæta við html í línu fyrir neðan
-	$('#modalContent').html('<div class="hk-cardTitle"><h1>' + movie.title + '</h1></div>'); 	
-	$('#modalContent').append('<div class="hk-undertitle">' + movie.genre_ids + '</div>'); 
-	$('#modalContent').append('<div class="hk-ratingCircle">' + '<h5>' + movie.vote_average + '</h5></div>'); // append límir upplýsingar við upplýsingar
+	$('#modalContent').html('<div class="hk-cardTitle"><h1>' + movie.title + '</h1></div>'); // nær í titil	
+	$('#modalContent').append('<div class="hk-undertitle">' + movie.genre_ids + '</div>');  // nær í genre
+	$('#modalContent').append('<div class="hk-ratingCircle">' + '<h5>' + movie.vote_average + '</h5></div>'); // append límir upplýsingar við upplýsingar // nær í einkun
 	$('#modalContent').append ('<img class="hk-card img" + src="https://image.tmdb.org/t/p/w780' + movie.poster_path + '">' + '</img>'); // nær í réttar myndir
 	$('#movieModal').modal('toggle') //toogle = show() is run if an element is hidden. hide() is run if an element is visable
 
 
-// þegar smellt er á modalContent  opnast about síðan -
+// þegar smellt er á modalContent  opnast about síðan 
 	$( '#modalContent' ).click(function() {
 		window.location.href='about-movie.html'; 	
 	});
-
-  
 }
-
-
-
-
-
 
 
 class Movie {
@@ -36,9 +29,9 @@ class Movie {
 		}
 	
 		findGenre(ids){
-			let genre = []; 
+			let genre = []; // arrow og for loop a vinna saman
 				for(var i = 0; i < ids.length; i++){
-					genre.push(arrayOfGenres.filter(function(item){ //beyta þessu í arrow function
+					genre.push(arrayOfGenres.filter(function(item){ //væri hægt að beyta þessu í arrow function
 						return item.id == ids[i]; //returnar objectinu sem hefur sama id og við erum að leita að
 					})[0].name); //erum bara að leita að einu í einu
 				}
@@ -94,7 +87,7 @@ class Movie {
 						{
 							breakpoint: 600,
 							settings: {
-								slidesToShow: 2.03,
+								slidesToShow: 2.03, // sést aðeins í næstu mynd
 								slidesToScroll: 2,
 								infinite: true,
 								dots: false,
@@ -124,16 +117,32 @@ class Movie {
 
 //klassi fyrir genre array 
 class Genre {
-	constructor (result) {
+	constructor (result) { //constructor með parameter
 		this.id = result.id;
 		this.name = result.name;
-		return this;
+		return this; //getter 
 	}
 														
 }
 
 
+// klasi auka
 
+//class MovieBox {
+	//constructor (title, year, genre, ratingLevel) { //constructor með parameters
+		//this.title = data.title // title er property
+		//this.year = data.year // year er property
+		//this.genre = data.genre // title er property
+		//this.ratingLevel = data.ratingLevel // ratingLevel er property
+	//}
+
+
+// method er bara function sem tilheyrir klasanum
+	//genreOfMovie( genre) {
+		//console.log (this.genre + "bestu myndirnar")
+
+	//}
+//} 
 
 
 

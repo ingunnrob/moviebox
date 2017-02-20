@@ -48,6 +48,10 @@ $(".year-slider")
     });
 
 
+@media all and (max-width: 600px) { 
+
+
+}
 
 
 

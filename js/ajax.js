@@ -24,9 +24,6 @@ function renderType(listType, APIPath) {
 
 }
 
-
-
-
 // Render Popular
 renderType('popular', '/discover/movie');
 
